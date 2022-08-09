@@ -1,0 +1,47 @@
+Realizar un programa que permita leer de teclado valores reales entre 1 y 9 para cargarlos 
+dentro de una matriz de 6x6, continuar sacando el promedio de todos los valores; 
+y para finalizar imprimir el resultado. Aplicar POO en el desarrollo de la matriz.
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+		
+       Matriz M = new Matriz();
+		
+import java.util.Scanner;
+
+public class Matriz {
+	
+	int mat [][] = new int [6][6];
+	int suma;
+	double promedio;
+	Scanner x = new Scanner(System.in);
+
+public Matriz () {
+		System.out.println("Ingresa los valores de la matriz que sean del 1 al 9");
+		
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < mat.length; j++) {
+				mat[i][j] = x.nextInt();
+				if (mat[i][j]>1 && mat[i][j]<9) {
+					
+					mat[i][j] = mat[i][j];
+				}
+				else {
+					System.out.println("Ingresa el rango indicado");
+					j--;
+				}
+			}
+		}
+		for (int i = 0; i < mat.length; i++) {
+			System.out.println("\n");
+			for (int j = 0; j < mat.length; j++) {
+		     suma += mat[i][j];
+			}
+		}
+		promedio = suma / 36;
+
+		System.out.println(promedio);
+	}
+	
+}
